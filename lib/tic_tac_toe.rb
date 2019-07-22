@@ -72,7 +72,7 @@ def won?(board)
     if empty_board
       win = false
     elsif combo.all? { |value| board[value] =="X" } || combo.all? { |value| board[value] =="O" }
-      win << combo
+      win = combo
     end
   end
   return win
