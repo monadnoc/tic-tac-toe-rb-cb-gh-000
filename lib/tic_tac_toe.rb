@@ -22,7 +22,7 @@ def input_to_index(inp)
 end
 
 def move(b, inp)
-  b[inp] = char
+  b[inp] = current_player(board)
   return b
 end
 
