@@ -22,7 +22,7 @@ def input_to_index(inp)
 end
 
 def move(board, inp, char)
-  board[inp] = current_player(board)
+  board[inp] = char
   return board
 end
 
@@ -43,7 +43,7 @@ def turn(board)
     input = gets.strip
     ind = input_to_index(input)
   end
-  move(board, ind)
+  move(board, ind, current_player(board))
   display_board(board)
 end
 
