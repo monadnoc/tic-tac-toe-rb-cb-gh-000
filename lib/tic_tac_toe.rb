@@ -66,13 +66,13 @@ def current_player(board)
 end
 
 def won?(board)
-  win = false
+  win = []
   empty_board = board.all? {|x| x == " "}
   WIN_COMBINATIONS.each do |combo|
     if empty_board
-      return false
+      win = false
     elsif combo.all? { |value| board[value] =="X" } || combo.all? { |value| board[value] =="O" }
-      win = combo
+      win << combo
     end
   end
   return win
